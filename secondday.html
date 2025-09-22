@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>CSS</title>
+    <style>/*css註解*/
+    /*css語法:
+        選擇器(
+            屬性:設定;
+            屬性:設定;
+            屬性:設定;
+        )
+    */
+    /*選擇器:
+        tag(html標籤) 例:div
+        #id          例 #d1 #d2 #d3
+        .class       例 .c1 .c2
+    */
+        div{
+            width: 200px;
+            height: 100px;
+            color: royalblue;
+            background: aquamarine;
+            display: inline-block;
+        }
+        .c1{
+            background: purple ;
+        }
+        .c2{
+            background: blueviolet;
+        }
+        /*css顏色
+            1.英文名稱
+            2.rgb(r 0-255, g 0-255, b 0-255)
+            3.hsl(色相 0-360, 彩度 0-100%, 亮度0-100%)
+            4.rgba
+            5.hsla
+            6.色碼(#rrggbb)
+        */
+        /*
+            display: block/inline/inline-block;
+            block:區塊元素, 自己一行 可設寬高
+            inline:行內元素 
+            inline-block
+        */
+    </style>
+</head>
+<body>
+    <div>1</div><div>2</div><div>3</div>
+    <span>4</span><span>5</span><span>6</span>
+    <div id="d1" class="c1">1</div>
+    <div id="d2" class="c2">2</div>
+    <div id="d3" class="c1">3</div>
+    <div id="d4" class="c1 c2">4</div>
+    
+</body>
+</html>
