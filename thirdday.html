@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>CSS漸層</title>
+    <style>
+        #d1{
+            height: 100px;
+            width: 400px;
+            background: linear-gradient(to right,red,blue);
+            /*
+            to: top right bottem left
+            0~360deg 0:top 90:right 由上開始順時針方向
+            */
+            }
+        #d2{
+            height: 50px;
+            width: 400px;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+        }
+         #d3{
+            height: 50px;
+            width: 400px;
+            background: linear-gradient(180deg, blue, indigo 30%, violet);
+        }
+         #d4{
+            height: 50px;
+            width: 400px;
+            background: linear-gradient(90deg, red, orange 33%, orange 66%, yellow);
+        }    
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+</body>    
+</html>
