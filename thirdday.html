@@ -2,6 +2,9 @@
 <head>
     <title>CSS漸層</title>
     <style>
+        div {
+            margin-bottom: 5px;            
+        }
         #d1{
             height: 100px;
             width: 400px;
@@ -25,6 +28,45 @@
             height: 50px;
             width: 400px;
             background: linear-gradient(90deg, red, orange 33%, orange 66%, yellow);
+        }
+        #d5{
+            height: 50px;
+            width: 400px;
+            background: repeating-linear-gradient(45deg, green 30%, crimson 33%, green 30%);
+        }
+        #d6{
+            height: 100px;
+            width: 400px;
+            background: radial-gradient(circle,purple,blue,white);
+            }
+        #d7{
+            height: 100px;
+            width: 400px;
+            background: radial-gradient(circle,crimson,white 30%,violet);
+        }
+         #d8{
+            height: 100px;
+            width: 400px;
+            background: repeating-radial-gradient(circle, gray 30%, indigo 30%, violet 40%);
+        }
+        /*錐狀漸層*/
+        #d9{
+            height: 100px;
+            width: 100px;
+            background: conic-gradient(white,gray,black,white);
+            
+        }
+        #d10{
+            height: 100px;
+            width: 100px;
+            background: conic-gradient(from 180deg,white,gray,black,white);
+            display: inline-block;
+        }
+        #d11{
+            height: 100px;
+            width: 100px;
+            background: repeating-conic-gradient(white 30%,wheat 35%,white 30%);
+            display: inline-block;
         }    
     </style>
 </head>
@@ -33,5 +75,12 @@
     <div id="d2"></div>
     <div id="d3"></div>
     <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+    <div id="d7"></div>
+    <div id="d8"></div>
+    <div id="d9"></div>
+    <div id="d10"></div>
+    <div id="d11"></div>
 </body>    
 </html>
