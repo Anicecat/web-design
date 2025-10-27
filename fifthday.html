@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>容器與框線</title>
+    <style>
+        /*
+        width 寬 height 高
+        padding 內填充
+        margin 外邊界
+        border 框線
+            width 線寬
+            color transparent 透明色
+            style 樣式
+                solid 實線
+                dashed 虛線
+                dotted 點線
+                double 雙線
+            radius 圓角
+        top/right/bottom/left       上右下左
+        top/x軸/bottom              上/左右/下              
+        y軸/x軸                     上下/左右
+        四邊                        四邊相同
+        
+         */
+        #d1 {
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            border: 1px black solid;
+        }
+        #d2 {
+            width: 200px;
+            height: 100px;
+            background-color: aqua;
+            border: 1px black solid;
+            margin: 5px 0px;
+            padding: 5px 15px 5px 10px;
+            /*box-sizing: border-box;*/
+        }
+        #d3 {
+            width: 200px;
+            height: 100px;
+            background-color: aquamarine;
+            border: 1px black solid;
+            border-width: 5px 10px 20px 30px;
+            border-style: solid dashed double dotted;
+        }
+        #d4 {
+            width: 200px;
+            height: 200px;
+            border: 1px black solid;
+            margin: 10px 0px;
+            border-radius: 10px 20px 30px 40px;
+        }
+        #d5 {
+            width: 200px;
+            height: 200px;
+            border: 20px black solid;
+            border-color: blue red green yellow;
+            margin: 10px 0px;
+        }
+        #d6 {
+            width: 0px;
+            height: 0px;
+            border: 100px black solid;
+            border-color: blue red green transparent;
+            border-width: 50px 100px 150px 200px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+</body> 
+</html>
