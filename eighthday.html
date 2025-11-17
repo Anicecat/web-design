@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>計時器</title>
+    <script>
+        sec=0;
+        function do_timer() {
+            sec++;
+            document.getElementById("timer").innerHTML=`${sec} seconds`;
+            
+        }
+        function start_timer() {
+            t1=setInterval(do_timer,500);
+        }
+        function stop_timer() {
+            clearInterval(t1);
+        }
+        function do_random() {
+            var n=Math.floor(Math.random()*100);
+            document.getElementById("random").innerHTML=(n<10)?("0"+n):n;
+        }
+        function lottery() {
+            setTimeout(clearInterval, 3000,setInterval(do_random, 10));
+        }
+        function dice() {
+            var dice=document.getElementById("dice");
+            t2=setTimeout(setInterval(function(x) {
+                var n=Math.floor(Math.random()*6)+1;
+                img.src= 'pic/${n}.png';
+            }, 10, dice));
+        }
+        function stop_dice(x) {
+            var n=Math.floor(Math.random()*6)+1;
+            var dice=document.getElementById("dice");
+            clearInterval(t2);
+            dice.src='pic/${n}.png';
+            if(n%2==x) {
+                document.getElementById("message").innerHTML="correct";
+            } else {
+                document.getElementById("message").innerHTML="wrong";
+            }
+        
+        }
+    </script>
+    <style>
+        #random {
+            font-size: 80pt;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="start_timer();">timer start</button>
+    <button onclick="stop_timer();">timer stop</button>
+    <div id="timer">0sec</div>
+    <hr>
+    <button onclick="lottery();">random number</button>
+    <div id="random">00</div>
+    <hr>
+    <img id="dice" src="png/Q.png" height="120px" onclick="dice();">
+    <button onclick="stop_dice(1);">奇數</button>
+    <button onclick="stop_dice(0);">偶數</button>
+    <div id="message"></div>
+</body> 
+</html>
